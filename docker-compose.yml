@@ -1,0 +1,14 @@
+services:
+  spring-cloud-config-server:
+    container_name: spring-config-server
+    image: "rushabh82/spring-cloud-config-server"
+    environment:
+      -  ENV_FILE=classpath:/application.properties
+    ports:
+      - "8888:8888"
+    logging:
+      driver: "local"
+      options:
+        max-size: 100m
+
+
